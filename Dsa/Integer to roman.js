@@ -1,3 +1,7 @@
+Input: num = 58
+Output: "LVIII"
+Explanation: L = 50, V = 5, III = 3
+
 var intToRoman = function(num) {
     const ones = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
     const tens = ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"];
