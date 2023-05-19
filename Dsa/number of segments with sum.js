@@ -1,14 +1,13 @@
-function repeating(str){
-let obj={};
-for(let key of str){
-    obj[key]? obj[key]++ : obj[key] =1;
-
-}
-for(let key in str){
-    if(obj[str[key]]==1){
-        console.log(key)
-        return;
+function segments(n,x,arr){
+    let count=0;
+    let l=0;
+    let sum=0;
+    for(let i=0;i<n;i++) {
+        sum+=arr[i];
+        while(sum>x){
+            sum -=arr[l++];
+        }
+        count += i-l+1;
     }
-}
-console.log(-1)
+    console.log(count);
 }
