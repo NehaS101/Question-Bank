@@ -1,14 +1,21 @@
 function repeating(str){
-    let obj={};
-    for(let key of str){
-        obj[key]? obj[key]++ : obj[key] =1;
-    
-    }
-    for(let key in str){
-        if(obj[str[key]]==1){
-            console.log(key)
-            return;
+    let obj={}
+    for(let i=0;i<S.length;i++){
+        if(obj[S[i]] == undefined){
+            obj[S[i]]=1;
+            
+        }else{
+             obj[S[i]]++;
         }
     }
-    console.log(-1)
+    let flag="Not Found"
+    for(let key in obj){
+       if(obj[key] == 1){
+           flag = key
+           break;
+       } 
+       
+       
+    }
+    console.log(flag)
     }
